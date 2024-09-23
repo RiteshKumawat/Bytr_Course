@@ -2,6 +2,7 @@ let express = require('express');
 let cors = require('cors');
 let app = express();
 let PORT = 3000;
+
 app.use(cors());
 
 app.get('/calculate-returns', (req, res) => {
@@ -39,6 +40,7 @@ app.get('/total-return-percentage', (req, res) => {
 
   let totalReturns = stock1 + stock2 + stock3 + stock4;
   res.send(totalReturns.toString());
+
 });
 
 app.get('/status', (req, res) => {
